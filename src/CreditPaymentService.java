@@ -4,7 +4,7 @@ public class CreditPaymentService {
             double percent,
             int months
     ) {
-        double percentPerMonth = percent / 100 / months;
+        double percentPerMonth = percent / 100 / 12;
 
         return sum * (percentPerMonth + (percentPerMonth / (Math.pow(1 + percentPerMonth, months) - 1)));
     }
